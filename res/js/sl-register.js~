@@ -1,0 +1,24 @@
+var pwd1 = undefined;
+var pwd2 = undefined;
+
+var btn = undefined;
+
+function checkPwd() {
+    if (pwd1 === undefined) {
+        pwd1 = document.getElementById("pwd1");
+    }
+    if (pwd2 === undefined) {
+        pwd2 = document.getElementById("pwd2");
+    }
+    if (btn === undefined) {
+        btn = document.getElementById("btn");
+    }
+    
+    if (!pwd1.value.equals(pwd2.value)) {
+        btn.disabled = true;
+        pwd2.style.border = "1px #ff0000 solid";
+    } else {
+        btn.disabled = false;
+        pwd2.style.border = "inherit";
+    }
+}
